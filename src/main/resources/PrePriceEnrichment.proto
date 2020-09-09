@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package com.boci.protobuf.PrePriceEnrichment;
+option java_package = "com.boci.protobuf";
+option java_outer_classname = "PrePriceEnrichment";
+
+
+
+message Request {
+	int32 RFQID = 1;
+	string ClientID = 2;
+	string ProductType = 3;
+	string SolveForType = 4;
+	string Underlying = 5;
+	double TargetPnl = 6;
+	double UpFront = 7;
+	string Tenor = 8;
+	double spot = 9;
+	double koprice = 10;
+	bool ManualTrigger = 11;
+}
+
+message Response {
+	int32 RFQID = 1;
+	string Currency = 2;
+	double TargetPnl = 3;
+	double UpFront = 4;
+	double VolMultipler = 5;	
+	ReturnCodeType ReturnCode = 6;
+	enum ReturnCodeType
+    {
+        OK = 0;
+        NA = 1;
+    }
+	string ReturnMessage = 7;
+}

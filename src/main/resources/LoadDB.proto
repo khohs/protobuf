@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.boci.protobuf.LoadDB;
+
+option java_package = "com.boci.protobuf";
+option java_outer_classname = "LoadDB";
+
+
+
+message Request {
+
+}
+
+message Response {
+	string ReturnMessage = 7;
+}

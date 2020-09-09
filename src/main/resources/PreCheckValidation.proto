@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package com.boci.protobuf.PreCheckValidation;
+option java_package = "com.boci.protobuf";
+option java_outer_classname = "PreCheckValidation";
+
+
+
+message Request {
+	int32 RFQID = 1;
+	string ClientID = 2;
+	string Action = 3;
+	string ProductType = 4;
+	string SwapNote = 5;
+	string NoOfStock = 6;
+	string Tenor = 7;
+	string Underlying = 8;
+	bool ManualTrigger = 9;
+}
+
+message Response {
+	int32 RFQID = 1;
+	ReturnCodeType ReturnCode = 2;
+	enum ReturnCodeType
+    {
+        OK = 0;
+        NA = 1;
+    }
+	string ReturnMessage = 3;
+}
