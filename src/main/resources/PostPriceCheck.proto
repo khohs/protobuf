@@ -13,7 +13,7 @@ message Request {
 	string productType = 3;
 	string SolveType = 4;
 	double Strike = 5;
-	double Volume = 6;
+	double Vol = 6;
 	double Pnl = 7;
 	string NextDivDate = 8;
 	int32 NextDivAmount = 9;
