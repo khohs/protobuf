@@ -25,6 +25,7 @@ message Request {
 	int32 AccumulationDays = 15;
 	double Spot = 16;
 	double KOPrice = 17;
+	int32 noOfDay = 18;
 }
 
 message Response {
