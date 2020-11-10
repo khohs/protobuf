@@ -27,5 +27,5 @@ message Response {
         NA = 1;
     }
 	string ReturnMessage = 3;
-	string AutoPrice = 4;
+	bool AutoPrice = 4;
 }
