@@ -20,11 +20,11 @@ message Request {
 	double TargetPnl = 10;
 	double UpFront = 11;
 	double DeltaInShare = 12;
-	
 	int32 NoOfDayInGuaranteePeriod = 14;
 	int32 AccumulationDays = 15;
 	double Spot = 16;
 	double KOPrice = 17;
+	bool needSlippage = 18;
 }
 
 message Response {
