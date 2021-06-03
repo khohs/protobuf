@@ -16,7 +16,7 @@ message Request {
 	double Vol = 6;
 	double Pnl = 7;
 	string NextDivDate = 8;
-	int32 NextDivAmount = 9;
+	double NextDivAmount = 9;
 	double TargetPnl = 10;
 	double UpFront = 11;
 	double DeltaInShare = 12;
