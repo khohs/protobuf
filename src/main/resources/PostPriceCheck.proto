@@ -25,6 +25,29 @@ message Request {
 	double Spot = 16;
 	double KOPrice = 17;
 	bool needSlippage = 18;
+	repeated UnderlyingRequest UnderlyingRequests = 19;
+	repeated UnderlyingCross UnderlyingCross = 20;
+	double coupon = 21;	
+}
+
+message UnderlyingRequest {
+	string code = 11;
+	double vol = 1;
+	double fxvol = 2;
+	double fxeqcorrelation = 3;
+	double strike = 4;
+	double AccrualStrike = 5;
+	double KO = 6;
+	double KI = 7;
+	double DeltaInShare = 8;
+	string NextDivDate = 9;
+	double NextDivAmount = 10;
+}
+
+message UnderlyingCross {
+   string UnderlyingCode1 = 1;
+   string UnderlyingCode2 = 2;
+   double Correlation = 3;
 }
 
 message Response {
