@@ -18,7 +18,33 @@ message Request {
 	double spot = 9;
 	double koprice = 10;
 	bool ManualTrigger = 11;
+	
+	string NoteOTC = 12;
+	int32 EffectiveDateOffset =13;
+	double FundingSpread = 14;
+    string KIType = 15;
+    string DenomCurrency = 16;
+    SizeType size = 17;
+	enum SizeType
+    {
+        Small = 0;
+        Standard = 1;
+    }
+    repeated UnderlyingRequest UnderlyingRequests = 18;
+	
 }
+
+
+message UnderlyingRequest {
+	string code = 1;
+	double spot = 2;
+	double koprice = 3;
+	double kiprice = 4;
+	double KIBarrierShiftMultiplier = 5;
+	double ImpliedVolMultiplier = 6;
+}
+
+
 
 message Response {
 	int32 RFQID = 1;
@@ -33,4 +59,22 @@ message Response {
         NA = 1;
     }
 	string ReturnMessage = 7;
+	
+	
+	repeated UnderlyingResponse UnderlyingResponses = 8; 
+	double FundingSpread = 10;
+	double FundingRateMultipler = 11;
+	string FundingPayLag = 12;
+	string IssueEffectiveDelay = 13;
+	string BaseDateOffset = 14;	
+	string TenorAppliedTo = 15; 
 }
+
+
+message UnderlyingResponse {
+	string code = 1;
+	string currency = 2;
+	double VolMultipler = 3;
+	double KIBarrierShift = 4;
+}
+
