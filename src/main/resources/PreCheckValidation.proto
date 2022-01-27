@@ -16,6 +16,11 @@ message Request {
 	string Tenor = 7;
 	string Underlying = 8;
 	bool ManualTrigger = 9;
+	/*
+		for RAN
+	*/
+	repeated string Underlyings = 10;
+	string OTCNote = 11;
 }
 
 message Response {
