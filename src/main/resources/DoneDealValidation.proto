@@ -14,6 +14,8 @@ message Request {
 	string Underlying = 4;
 	double Notional = 5;
 	int32 NoOfShare = 6;
+	
+	repeated string Underlyings = 7;
 }
 
 message Response {
