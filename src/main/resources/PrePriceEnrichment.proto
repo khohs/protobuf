@@ -31,6 +31,9 @@ message Request {
         Standard = 1;
     }
     repeated UnderlyingRequest UnderlyingRequests = 18;
+    
+    string guaranteedperiods = 19;
+    string observationfrequency = 20;
 	
 }
 
@@ -68,6 +71,9 @@ message Response {
 	string IssueEffectiveDelay = 13;
 	string BaseDateOffset = 14;	
 	string TenorAppliedTo = 15; 
+	string StructuredSettleDelay = 16;
+	string getNoOfFixedCoupon = 17;
+	string FundingSpreadType = 18;
 }
 
 
