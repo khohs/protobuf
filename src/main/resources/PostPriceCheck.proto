@@ -42,6 +42,7 @@ message UnderlyingRequest {
 	double DeltaInShare = 8;
 	string NextDivDate = 9;
 	double NextDivAmount = 10;
+	string spot = 12;
 }
 
 message UnderlyingCross {
