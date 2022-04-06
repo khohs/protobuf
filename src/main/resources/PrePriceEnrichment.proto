@@ -72,7 +72,7 @@ message Response {
 	string BaseDateOffset = 14;	
 	string TenorAppliedTo = 15; 
 	string StructuredSettleDelay = 16;
-	string getNoOfFixedCoupon = 17;
+	string NoOfFixedCoupon = 17;
 	string FundingSpreadType = 18;
 }
 
